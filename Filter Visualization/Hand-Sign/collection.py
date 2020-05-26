@@ -62,6 +62,7 @@ while True:
         cv2.imwrite(path + "/4/" + str(count['four']) + ".jpg", roi)
     if key & 0xFF == ord('5'):
         cv2.imwrite(path + "/5/" + str(count['five']) + ".jpg", roi)
+        
 cap.release()
 cv2.destroyAllWindows()
 
