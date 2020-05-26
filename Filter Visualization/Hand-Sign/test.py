@@ -18,6 +18,7 @@ def preProcessing(img):
     return img
 
 while True:
+    
     _, frame = cap.read()
     frame = cv2.flip(frame,1)
     x1 = int(0.7 * frame.shape[1])
