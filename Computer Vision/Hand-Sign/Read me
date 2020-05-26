@@ -1,0 +1,7 @@
+This projects deals with creating a custom datasets of hand sign (0, 1, 2, 3, 4, 5)
+
+Storing it in a folder
+
+Training the network using tensorflow
+
+Testing the same using webcam and opencv
