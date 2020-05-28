@@ -1,18 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # The concept behind this.
-# 
+# # The concept behind this .
 # The project is done in Pytorch version 1.5.0
-# 
 # The algorithm for the below code is taken from the paper - https://arxiv.org/abs/1311.2901. 
-# 
 # A great paper for peeps working on or(just started) in CNN. The technique used here is the same that is used in **GAN's** and **Neural Style Transfer**. Only the technique is same, not he method.
-# 
 # The Project in short is all about what **patterns** is CNN looking for in the image that is passed in the network.
 
 # ## Importing datasets:
-# 
 # 1. **cv2**: for reading and reszing the image
 # 2. **torch libraries**: for tensor applications and models
 # 3. **matplotlib**: for plotting
@@ -50,15 +45,10 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 # ### Importing the model from pytorch and moving to device.
-# 
-# You can change the size of the input image (N, H, W) in summary (**args** ) and can see the size of the at each layer.
-# 
+# You can change the size of the input image (N, H, W) in summary (**args** ) and can see the size of the at each layer.# 
 # N: Number of channels
-# 
-# H: Height of image
-# 
+# H: Height of image 
 # W: Width of Image
-
 # In[15]:
 
 
@@ -67,8 +57,7 @@ print(summary(model, (3,223,223)))
 
 
 # # Making a model for alexnet network as mentioned in pytorch.
-# # Here - https://pytorch.org/docs/stable/torchvision/models.html?highlight=alexnet#torchvision.models.alexnet
-# 
+# # Here - https://pytorch.org/docs/stable/torchvision/models.html?highlight=alexnet#torchvision.models.alexnet# 
 # #### What we are doing in this section is we will create a module for our alexnet having features and classifiers and then assigning the pretrained weights to our created features and classifier.
 
 # In[3]:
@@ -140,12 +129,9 @@ class alexConv(nn.Module):
         return x
 
 
-# # Defining Deconv net for our alexnet model.
-# 
-# Note here we won't declare the classifier section as mentioned above. We will start from bottom and go to top for our input.
-# 
-#             Conv-Net:  Input --> Conv1 --> ReLu --> MaxPool2d.
-# 
+# # Defining Deconv net for our alexnet model. 
+# Note here we won't declare the classifier section as mentioned above. We will start from bottom and go to top for our input. 
+#             Conv-Net:  Input --> Conv1 --> ReLu --> MaxPool2d. 
 #             Decon-Net: MaxPool2d --> ReLU --> Conv1 --> Input.
 
 # In[4]:
@@ -201,7 +187,6 @@ class alexDeconv(nn.Module):
 
 
 # Here we are reading the Imagent label txt file.
-
 # In[5]:
 
 
@@ -209,16 +194,11 @@ file = open("label_idx.txt", "r").read()
 dicti = eval(file)
 
 
-# # Funtions:
-# 
-# 1. **get_image**:  It takes image path as input and returns image in a format accepted by the model.
-# 
-# 2. **collect**:  It iterate over every layer in the alexnet conv model and hook the function i.e stores the output of every layer in feature_maps and pool_loci defined in alexConv().
-# 
-#     2.1. **hook**:  provides the hook for each layer.
-#     
+# # Funtions: 
+# 1. **get_image**:  It takes image path as input and returns image in a format accepted by the model. 
+# 2. **collect**:  It iterate over every layer in the alexnet conv model and hook the function i.e stores the output of every layer in feature_maps and pool_loci defined in alexConv(). 
+#     2.1. **hook**:  provides the hook for each layer.     
 # 3. **vis_layer**:  It calculates the maximum activated feature map in each Conv2d layer. Zero out all the other feature maps of the layer and pass that feature maps in alexDeconv() to produce the output patterns
-
 # In[6]:
 
 
