@@ -6,3 +6,7 @@ Results
 ![](https://github.com/achyut-srivastava/Projects/blob/master/Filter%20Visualization/NEURAL%20STYLE%20TRANSFER/I.png)
 
 ![](https://github.com/achyut-srivastava/Projects/blob/master/Filter%20Visualization/NEURAL%20STYLE%20TRANSFER/I_S.png)
+
+![](https://github.com/achyut-srivastava/Projects/blob/master/Filter%20Visualization/NEURAL%20STYLE%20TRANSFER/I_1.png)
+
+![](https://github.com/achyut-srivastava/Projects/blob/master/Filter%20Visualization/NEURAL%20STYLE%20TRANSFER/I_S_1.png)
