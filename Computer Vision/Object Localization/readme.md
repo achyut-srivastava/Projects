@@ -4,7 +4,7 @@ The backbone layer is resnet-101 in pytorch.
 
 The red dots (🔴) are the actual points and the green dots(🟢) are the predicted ones.
 
-![](https://github.com/achyut-srivastava/Projects/edit/master/Computer%20Vision/Object%20Localization/object localization.jpg)
+![](https://github.com/achyut-srivastava/Projects/blob/master/Computer%20Vision/Object%20Localization/object%20localization.JPG)
 
 Loss function which I have used is: L1 loss because it doesn't penalizes the error too much.
 
